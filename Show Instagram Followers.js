@@ -8,8 +8,6 @@ let detailColor = Color.white();
 
 //Get Insta Name as arg:
 let account = args.widgetParameter;
-if (!account)
-  account = "waldorf.lehrerin"
 
 // Gets page url
 let url = "https://www.instagram.com/" + account + "/";

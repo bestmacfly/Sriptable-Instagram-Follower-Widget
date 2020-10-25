@@ -8,6 +8,8 @@ let detailColor = Color.white();
 
 //Get Insta Name as arg:
 let account = args.widgetParameter;
+if (!account)
+  account = "PLACE YOUR DEFAULT ACCOUNT HERE"
 
 // Gets page url
 let url = "https://www.instagram.com/" + account + "/";
@@ -33,7 +35,7 @@ function createWidget(followers,avatar,date){
   let widget = new ListWidget();
   widget.backgroundColor = Color.black();
   if (avatar) {
-    const wimg = widget.addImage(avatar)
+    let wimg = widget.addImage(avatar)
     wimg.centerAlignImage();
     wimg.imageSize = new Size(60, 60)
   }
@@ -77,8 +79,8 @@ async function extractAvatarImage(html) {
 
 // helper function to download an image from a given url
 async function loadImage(imgUrl) {
-  const url = imgUrl !== null ? imgUrl : placeholder;
-  const req = new Request(url)
+  let url = imgUrl !== null ? imgUrl : placeholder;
+  let req = new Request(url)
 	const image = await req.loadImage()
 	
 	return image

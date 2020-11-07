@@ -140,19 +140,19 @@ function createWidget(followers, avatar, stat) {
   let month=getTendendy(stat,followers,30);
 
   if (yesterday) {
-    let wDate = widget.addText("Gestern: " + yesterday);
+    let wDate = widget.addText("Yesterday: " + yesterday);
     wDate.font = Font.mediumRoundedSystemFont(statusFontSize)
     wDate.textColor = detailColor;
     wDate.centerAlignText();
   }
   if (week) {
-    let wDate = widget.addText("Woche: " + week);
+    let wDate = widget.addText("Week: " + week);
     wDate.font = Font.mediumRoundedSystemFont(statusFontSize)
     wDate.textColor = detailColor;
     wDate.centerAlignText();
   }
   if (month) {
-    let wDate = widget.addText("Monat: " + month);
+    let wDate = widget.addText("Month: " + month);
     wDate.font = Font.mediumRoundedSystemFont(statusFontSize)
     wDate.textColor = detailColor;
     wDate.centerAlignText();

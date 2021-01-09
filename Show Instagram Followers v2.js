@@ -181,9 +181,11 @@ function getTendendy(stat, followers, days) {
 
 function extractFollowers(html) {
   let followersStart = html.indexOf('"edge_followed_by":{"count":');
-  let followersEnd = html.indexOf('},"followed_by_viewer"', followersStart + 1);
+  let followersEnd = html.indexOf('},"fbid"', followersStart + 1);
   let followers = html.substring(followersStart + 28, followersEnd);
-  console.log("Followers: " + followers);
+  console.log("followersStart: " + followersStart)
+  console.log("followersEnd: " + followersEnd)
+  console.log("followers: " + followers)
   return followers;
 }
 
